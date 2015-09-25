@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['lib/**/*.js', 'node_modules/hls.js/dist/hls.js'],
+        src: ['node_modules/hls.js/dist/hls.js', 'lib/**/*.js'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
