@@ -1,6 +1,5 @@
 /.jshintrc
 /.editorconfig
 /tmp
-dist/
 test/
 *~
