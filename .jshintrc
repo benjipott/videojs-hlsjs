@@ -9,6 +9,7 @@
     "videojs",
     "Hls",
     "HlsJs",
-    "require"
+    "require",
+    "module"
   ]
 }

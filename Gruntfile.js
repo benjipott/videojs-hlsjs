@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['node_modules/hls.js/dist/hls.js', 'lib/**/*.js', '!lib/**/closure.js'],
+        src: ['lib/**/*.js', '!lib/**/closure.js'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
@@ -98,8 +98,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build',
     ['concat',
-      'uglify',
-      'closure']);
+      'uglify']);
 
   grunt.registerTask('test', function () {
     grunt.task.run(['manifests-to-js', 'qunit']);
