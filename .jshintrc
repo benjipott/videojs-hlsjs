@@ -8,6 +8,7 @@
   "predef": [
     "videojs",
     "Hls",
-    "HlsJs"
+    "HlsJs",
+    "require"
   ]
 }
