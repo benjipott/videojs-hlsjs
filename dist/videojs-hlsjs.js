@@ -4956,7 +4956,7 @@ module.exports = exports['default'];
 /*! videojs-hls - v0.0.0 - 2015-9-24
  * Copyright (c) 2015 benjipott
  * Licensed under the Apache-2.0 license. */
-(function (window, videojs, document, undefined) {
+(function (window, videojs, Hls, document, undefined) {
   'use strict';
 
   var defaults = {
@@ -5117,4 +5117,4 @@ module.exports = exports['default'];
 
 // register the media
 })
-(window, window.videojs, document);
+(window, window.videojs, Hls, document);
