@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['node_modules/hls.js/dist/hls.js', 'lib/**/*.js'],
+        src: ['node_modules/hls.js/dist/hls.js', 'lib/**/*.js', '!lib/**/closure.js'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
@@ -29,6 +29,18 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= concat.dist.dest %>',
         dest: 'dist/<%= pkg.name %>.min.js'
+      }
+    },
+    closure: {
+      options: {
+        closure: 'lib/closure.js'
+      },
+      wrap: {
+        files: [
+          {
+            src: ['dist/<%= pkg.name %>.js']
+          }
+        ]
       }
     },
     qunit: {
@@ -81,12 +93,13 @@ module.exports = function (grunt) {
     ['clean',
       'jshint',
       'test',
-      'build',
+      'build'
     ]);
 
   grunt.registerTask('build',
     ['concat',
-      'uglify']);
+      'uglify',
+      'closure']);
 
   grunt.registerTask('test', function () {
     grunt.task.run(['manifests-to-js', 'qunit']);
@@ -136,4 +149,29 @@ module.exports = function (grunt) {
       grunt.file.write('tmp/manifests.js', jsManifests);
       grunt.file.write('tmp/expected.js', jsExpected);
     });
+
+  grunt.registerMultiTask('closure', 'Add closure around the app', function () {
+
+
+    // Set up defaults for the options hash
+    var options = this.options({
+      closure: ''
+    });
+
+    // Iterate over the list of files and add the banner or footer
+    this.files.forEach(function (file) {
+      file.src.forEach(function (src) {
+        if (grunt.file.isFile(src)) {
+          // wrap the original app source with the closure
+          grunt.file.write(src,
+            grunt.file.read(options.closure)
+              .replace(/\/\*#replaceCode#\*\//, grunt.file.read(src))
+          );
+          grunt.verbose.writeln('Closure added to file ' + src.cyan);
+        }
+
+      });
+    });
+
+  });
 };
