@@ -1,0 +1,31 @@
+{
+  "name": "videojs-hlsjs",
+  "version": "0.0.0",
+  "author": "benjipott",
+  "description": "A revolutionary plugin for video.js",
+  "license": "Apache-2.0",
+  "keywords": [
+    "videojs",
+    "html5",
+    "flash",
+    "video",
+    "player"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-contrib-clean": "^0.4",
+    "grunt-contrib-concat": "^0.3",
+    "grunt-contrib-jshint": "^0.6",
+    "grunt-contrib-qunit": "^0.2",
+    "grunt-contrib-uglify": "^0.2",
+    "grunt-contrib-watch": "^0.4",
+    "hls.js": "git+https://github.com/Afrostream/hls.js.git#master",
+    "path": "^0.12.7",
+    "qunitjs": "^1.12",
+    "sinon": "1.10.2",
+    "video.js": "^4.5"
+  },
+  "peerDependencies": {
+    "video.js": "^4.5"
+  }
+}
