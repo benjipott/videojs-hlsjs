@@ -81,7 +81,11 @@ module.exports = function (grunt) {
     ['clean',
       'jshint',
       'test',
-      'concat',
+      'build',
+    ]);
+
+  grunt.registerTask('build',
+    ['concat',
       'uglify']);
 
   grunt.registerTask('test', function () {

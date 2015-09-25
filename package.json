@@ -4,6 +4,11 @@
   "author": "benjipott",
   "description": "A revolutionary plugin for video.js",
   "license": "Apache-2.0",
+  "main": "./dist/videojs-hlsjs.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:benjipott/videojs-hlsjs.git"
+  },
   "keywords": [
     "videojs",
     "html5",
