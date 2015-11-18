@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Videojs HlsJs plugin</title>
 
-  <link href="node_modules/video.js/dist/video-js/video-js.css" rel="stylesheet">
+  <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
 
   <style>
     body {
@@ -43,12 +43,12 @@
   </p>
   <source src="http://www.streambox.fr/playlists/x36xhzz/x36xhzz.m3u8" type="application/vnd.apple.mpegurl">
 </video>
-<script src="node_modules/video.js/dist/video-js/video.dev.js"></script>
+<script src="node_modules/video.js/dist/video.js"></script>
 <script src="node_modules/hls.js/dist/hls.js"></script>
 <script src="lib/videojs-hlsjs.js"></script>
 <script>
   // fire up the plugin
-  videojs('video');
+  videojs('video', {techOrder : ['hlsjs', 'html5']});
 </script>
 </body>
 </html>

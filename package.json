@@ -24,11 +24,11 @@
     "grunt-contrib-qunit": "^0.2",
     "grunt-contrib-uglify": "^0.2",
     "grunt-contrib-watch": "^0.4",
-    "hls.js": "git+https://github.com/Afrostream/hls.js.git#master",
+    "hls.js": "https://github.com/dailymotion/hls.js#v0.2.4",
     "path": "^0.12.7",
     "qunitjs": "^1.12",
     "sinon": "1.10.2",
-    "video.js": "^4.5"
+    "video.js": "^5.2.0"
   },
   "peerDependencies": {
     "video.js": "^4.5"
