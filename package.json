@@ -24,13 +24,13 @@
     "grunt-contrib-qunit": "^0.2",
     "grunt-contrib-uglify": "^0.2",
     "grunt-contrib-watch": "^0.4",
-    "hls.js": "https://github.com/dailymotion/hls.js#v0.2.4",
+    "hls.js": "https://github.com/dailymotion/hls.js#v0.3.5",
     "path": "^0.12.7",
     "qunitjs": "^1.12",
     "sinon": "1.10.2",
-    "video.js": "^5.2.0"
+    "video.js": "^5.2.4"
   },
   "peerDependencies": {
-    "video.js": "^5.2.0"
+    "video.js": "^5.2.4"
   }
 }
