@@ -28,9 +28,6 @@
     "path": "^0.12.7",
     "qunitjs": "^1.12",
     "sinon": "1.10.2",
-    "video.js": "^5.2.0"
-  },
-  "peerDependencies": {
-    "video.js": "^4.5"
+    "video.js": "^5.2.4"
   }
 }
