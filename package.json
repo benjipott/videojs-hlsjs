@@ -29,8 +29,5 @@
     "qunitjs": "^1.12",
     "sinon": "1.10.2",
     "video.js": "^5.2.4"
-  },
-  "peerDependencies": {
-    "video.js": "^5.2.4"
   }
 }
