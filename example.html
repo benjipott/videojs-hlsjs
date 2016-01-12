@@ -48,7 +48,9 @@
 <script src="lib/videojs-hlsjs.js"></script>
 <script>
   // fire up the plugin
-  videojs('video');
+  videojs('video').on('fragMoovDataParsed', function (event, data) {
+        console.log('data %s', data.startPTS);
+    });
 </script>
 </body>
 </html>
